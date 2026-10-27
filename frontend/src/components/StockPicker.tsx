@@ -47,6 +47,7 @@ export function StockPicker({ value, onChange, label = "Choose a stock" }: Stock
           <button
             key={item.label}
             type="button"
+            aria-pressed={exchange === item.value}
             onClick={() => setExchange(item.value)}
             className={`rounded-md px-2.5 py-1 text-[10px] font-semibold tracking-wide ${exchange === item.value ? "bg-accent text-slate-950" : "bg-canvas/70 text-slate-500 hover:text-white"}`}
           >
