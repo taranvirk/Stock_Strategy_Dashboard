@@ -30,7 +30,9 @@ class YahooMarketDataProvider(MarketDataProvider):
         last_error: Exception | None = None
         for attempt in range(3):
             try:
-                async with httpx.AsyncClient(timeout=8, headers={"User-Agent": "TradeIQ/1.0"}) as client:
+                async with httpx.AsyncClient(
+                    timeout=8, headers={"User-Agent": "StockStrategyDashboard/1.0"}
+                ) as client:
                     response = await client.get(f"{self.base_url}/{symbol}", params=params)
                     response.raise_for_status()
                     return response.json()

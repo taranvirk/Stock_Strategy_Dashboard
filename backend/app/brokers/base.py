@@ -50,7 +50,7 @@ class SimulatedBroker(Broker):
 class AlpacaPaperBroker(Broker):
     def __init__(self, key: str, secret: str, base_url: str = "https://paper-api.alpaca.markets") -> None:
         if "paper-api" not in base_url:
-            raise ValueError("TradeIQ only permits Alpaca paper-trading endpoints")
+            raise ValueError("Stock Strategy Dashboard only permits Alpaca paper-trading endpoints")
         self.base_url = base_url.rstrip("/")
         self.headers = {"APCA-API-KEY-ID": key, "APCA-API-SECRET-KEY": secret}
 

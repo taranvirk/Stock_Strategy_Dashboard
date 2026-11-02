@@ -1,6 +1,6 @@
 # Architecture
 
-TradeIQ uses a layered monolith so the business boundaries are visible without premature microservice complexity. FastAPI routes validate transport concerns and delegate to provider, feature, ML, strategy, backtest, risk, and broker modules. SQLAlchemy is the persistence boundary; Alembic owns schema changes.
+Stock Strategy Dashboard uses a layered monolith so the business boundaries are visible without premature microservice complexity. FastAPI routes validate transport concerns and delegate to provider, feature, ML, strategy, backtest, risk, and broker modules. SQLAlchemy is the persistence boundary; Alembic owns schema changes.
 
 The critical order path is one-way: prediction → strategy → risk decision → order state → broker → trade/portfolio journal. A model module never imports a broker. The independent risk manager applies the global kill switch, cash, position, exposure, and confidence constraints before an order can be submitted.
 

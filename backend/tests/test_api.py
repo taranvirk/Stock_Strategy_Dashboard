@@ -24,7 +24,7 @@ def test_root_returns_application_identity() -> None:
     response = asyncio.run(get("/"))
 
     assert response.status_code == 200
-    assert response.json()["name"] == "TradeIQ"
+    assert response.json()["name"] == "Stock Strategy Dashboard"
 
 
 def test_health_reports_database_connection() -> None:

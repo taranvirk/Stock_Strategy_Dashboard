@@ -7,8 +7,8 @@ export function Brand() {
         <Activity size={21} strokeWidth={2.2} aria-hidden="true" />
       </div>
       <div>
-        <p className="text-lg font-semibold tracking-tight text-white">TradeIQ</p>
-        <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-slate-500">Market intelligence</p>
+        <p className="text-lg font-semibold tracking-tight text-white">Stock Strategy</p>
+        <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-slate-500">Trading dashboard</p>
       </div>
     </div>
   );

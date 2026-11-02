@@ -24,9 +24,9 @@ def database_schema():
         user = User(
             email="demo@tradeiq.dev",
             password_hash=hash_password("tradeiq-demo"),
-            first_name="TradeIQ",
+            first_name="Stock Strategy",
             last_name="Demo",
-            full_name="TradeIQ Demo",
+            full_name="Stock Strategy Demo",
             is_demo=True,
         )
         db.add(user)

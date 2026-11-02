@@ -1,8 +1,8 @@
-# TradeIQ
+# Stock Strategy Dashboard
 
 **AI-Powered Algorithmic Trading & Portfolio Analytics Platform**
 
-TradeIQ is a full-stack fintech research platform that turns validated market data into explainable predictions, risk-gated simulated orders, portfolio accounting, and recruiter-friendly analytics. It is built as a product—not a prediction notebook.
+Stock Strategy Dashboard is a full-stack fintech research platform that turns validated market data into explainable predictions, risk-gated simulated orders, portfolio accounting, and recruiter-friendly analytics. It is built as a product—not a prediction notebook.
 
 > Educational and portfolio software only. This is not investment advice. Live trading is not implemented and all execution defaults to disabled simulation mode.
 

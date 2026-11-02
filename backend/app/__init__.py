@@ -1,1 +1,1 @@
-"""TradeIQ backend application package."""
+"""Stock Strategy Dashboard backend application package."""

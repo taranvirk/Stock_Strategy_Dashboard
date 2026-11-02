@@ -30,7 +30,7 @@ async def lifespan(_: FastAPI):
 
 app = FastAPI(
     title=settings.app_name,
-    description="API foundation for the TradeIQ trading and portfolio analytics platform.",
+    description="API foundation for the Stock Strategy Dashboard trading and portfolio analytics platform.",
     version="0.1.0",
     docs_url="/docs",
     redoc_url="/redoc",
@@ -52,7 +52,7 @@ app.include_router(api_router, prefix=settings.api_v1_prefix)
 @app.get("/", tags=["meta"])
 def root() -> dict[str, str]:
     return {
-        "name": "TradeIQ",
+        "name": "Stock Strategy Dashboard",
         "status": "online",
         "docs": "/docs",
     }

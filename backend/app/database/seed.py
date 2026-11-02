@@ -107,15 +107,19 @@ def seed_market_catalog(db: Session, include_demo_history: bool = True) -> None:
 
 def seed_demo_database(db: Session) -> None:
     seed_market_catalog(db)
-    if db.scalar(select(User).where(User.email == DEMO_EMAIL)):
+    existing_demo = db.scalar(select(User).where(User.email == DEMO_EMAIL))
+    if existing_demo:
+        if existing_demo.full_name == "TradeIQ Demo":
+            existing_demo.first_name = "Stock Strategy"
+            existing_demo.full_name = "Stock Strategy Demo"
         db.commit()
         return
     user = User(
         email=DEMO_EMAIL,
         password_hash=hash_password(DEMO_PASSWORD),
-        first_name="TradeIQ",
+        first_name="Stock Strategy",
         last_name="Demo",
-        full_name="TradeIQ Demo",
+        full_name="Stock Strategy Demo",
         is_demo=True,
         last_login_at=datetime.now(UTC),
     )

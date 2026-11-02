@@ -18,7 +18,7 @@ class Settings(BaseSettings):
         extra="ignore",
     )
 
-    app_name: str = "TradeIQ API"
+    app_name: str = "Stock Strategy Dashboard API"
     app_env: Literal["development", "test", "production"] = "development"
     debug: bool = False
     log_level: str = "INFO"

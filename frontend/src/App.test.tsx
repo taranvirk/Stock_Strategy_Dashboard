@@ -16,7 +16,7 @@ vi.mock("./services/api", async (importOriginal) => {
   const original = await importOriginal<typeof import("./services/api")>();
   return {
     ...original,
-    getMe: vi.fn().mockResolvedValue({ id: 1, first_name: "TradeIQ", last_name: "Demo", full_name: "TradeIQ Demo", email: "demo@tradeiq.dev", is_demo: true, created_at: "2026-01-01T00:00:00Z", onboarding_required: false }),
+    getMe: vi.fn().mockResolvedValue({ id: 1, first_name: "Stock Strategy", last_name: "Demo", full_name: "Stock Strategy Demo", email: "demo@tradeiq.dev", is_demo: true, created_at: "2026-01-01T00:00:00Z", onboarding_required: false }),
   };
 });
 

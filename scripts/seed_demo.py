@@ -12,4 +12,4 @@ from app.database.session import SessionLocal  # noqa: E402
 if __name__ == "__main__":
     with SessionLocal() as database:
         seed_demo_database(database)
-    print("TradeIQ demo account and market data are ready.")
+    print("Stock Strategy Dashboard demo account and market data are ready.")

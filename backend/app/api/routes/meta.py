@@ -9,7 +9,7 @@ router = APIRouter(prefix="/meta", tags=["meta"])
 def application_metadata() -> dict[str, str | bool]:
     settings = get_settings()
     return {
-        "name": "TradeIQ",
+        "name": "Stock Strategy Dashboard",
         "environment": settings.app_env,
         "trading_mode": settings.trading_mode,
         "trading_enabled": settings.trading_enabled,
